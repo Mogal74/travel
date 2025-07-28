@@ -1,0 +1,131 @@
+.destinations {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+}
+
+.destinations h2 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.destinations h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd600, #ffed4e);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.destinations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.destination-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd600, #ffed4e);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover::before {
+  transform: scaleX(1);
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.05);
+}
+
+.destination-card h3 {
+  margin: 1.5rem 1.5rem 1rem 1.5rem;
+  font-size: 1.4rem;
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+.destination-card p {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .destinations {
+    padding: 3rem 1rem;
+  }
+  
+  .destinations h2 {
+    font-size: 2rem;
+  }
+  
+  .destinations-list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .destination-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .destinations {
+    padding: 2rem 1rem;
+  }
+  
+  .destinations h2 {
+    font-size: 1.75rem;
+  }
+  
+  .destination-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+  }
+  
+  .destination-card p {
+    font-size: 0.9rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+} 
