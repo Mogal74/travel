@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Destinations from './components/Destinations';
 import Packages from './components/Packages';
+import Blog from './components/Blog';
 import Testimonials from './components/Testimonials';
 import RentalServices from './components/RentalServices';
 import Footer from './components/Footer';
@@ -20,7 +21,8 @@ function App() {
       <Navbar openContactModal={openContactModal} />
       <Hero />
       <Destinations />
-      <Packages />
+      {/* <Packages /> */}
+      <Blog />
       <RentalServices />
       <Testimonials />
       <Footer openContactModal={openContactModal} />

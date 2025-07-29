@@ -19,7 +19,8 @@ function Navbar({ openContactModal }) {
       <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <li><a href="#home" onClick={closeMenu}>Home</a></li>
         <li><a href="#destinations" onClick={closeMenu}>Destinations</a></li>
-        <li><a href="#packages" onClick={closeMenu}>Packages</a></li>
+        {/* <li><a href="#packages" onClick={closeMenu}>Packages</a></li> */}
+        <li><a href="#blog" onClick={closeMenu}>Blog</a></li>
         <li><a href="#rentals" onClick={closeMenu}>Rentals</a></li>
         <li><a href="#contact" onClick={e => { e.preventDefault(); closeMenu(); openContactModal(); }}>Contact</a></li>
       </div>

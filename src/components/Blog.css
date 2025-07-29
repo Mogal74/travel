@@ -1,0 +1,498 @@
+.blog {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  transform: scale(1);
+  transition: all 0.4s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-intro {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #495057;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.temple-list {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.temple-item {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-left: 5px solid #0d47a1;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.temple-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.temple-number {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+  transition: all 0.3s ease;
+}
+
+.temple-item:hover .temple-number {
+  transform: scale(1.1);
+}
+
+.temple-image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.temple-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.temple-item:hover .temple-image {
+  transform: scale(1.05);
+}
+
+.temple-item:hover .temple-image img {
+  transform: scale(1.1);
+}
+
+.temple-content {
+  flex: 1;
+}
+
+.temple-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #0d47a1;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.temple-item:hover .temple-content h3 {
+  color: #1565c0;
+}
+
+.temple-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.temple-item:hover .temple-content p {
+  color: #333;
+}
+
+.blog-cta {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+  color: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(13, 71, 161, 0.3);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.blog-cta:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(13, 71, 161, 0.4);
+}
+
+.blog-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.blog-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #ffd600 0%, #ffed4e 100%);
+  color: #0d47a1;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 214, 0, 0.3);
+  transform: scale(1);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #ffd600 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 214, 0, 0.4);
+}
+
+/* Large Desktop Screens */
+@media (min-width: 1400px) {
+  .blog {
+    padding: 6rem 3rem;
+  }
+  
+  .blog-title {
+    font-size: 3.5rem;
+  }
+  
+  .blog-intro {
+    font-size: 1.5rem;
+    max-width: 900px;
+  }
+  
+  .temple-item {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+  
+  .temple-image {
+    width: 250px;
+    height: 180px;
+  }
+  
+  .temple-content h3 {
+    font-size: 1.7rem;
+  }
+  
+  .temple-content p {
+    font-size: 1.2rem;
+  }
+  
+  .blog-cta {
+    padding: 4rem;
+  }
+  
+  .blog-cta h3 {
+    font-size: 2.5rem;
+  }
+  
+  .blog-cta p {
+    font-size: 1.4rem;
+  }
+  
+  .cta-button {
+    font-size: 1.4rem;
+    padding: 1.2rem 3rem;
+  }
+}
+
+/* Medium Desktop Screens */
+@media (max-width: 1399px) and (min-width: 1024px) {
+  .blog {
+    padding: 5rem 2.5rem;
+  }
+  
+  .blog-title {
+    font-size: 3.2rem;
+  }
+  
+  .blog-intro {
+    font-size: 1.4rem;
+    max-width: 850px;
+  }
+  
+  .temple-image {
+    width: 220px;
+    height: 165px;
+  }
+  
+  .temple-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  .temple-content p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .blog {
+    padding: 4rem 2rem;
+  }
+  
+  .blog-title {
+    font-size: 2.8rem;
+  }
+  
+  .blog-intro {
+    font-size: 1.3rem;
+    max-width: 800px;
+  }
+  
+  .temple-item {
+    padding: 1.8rem;
+    gap: 1.3rem;
+  }
+  
+  .temple-image {
+    width: 180px;
+    height: 135px;
+  }
+  
+  .temple-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .temple-content p {
+    font-size: 1.05rem;
+  }
+  
+  .temple-item:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+  
+  .temple-item:hover .temple-image img {
+    transform: scale(1.08);
+  }
+  
+  .blog-cta {
+    padding: 2.5rem;
+  }
+  
+  .blog-cta h3 {
+    font-size: 1.8rem;
+  }
+  
+  .blog-cta p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 2.2rem;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-1px) scale(1.03);
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+  .blog {
+    padding: 3rem 1rem;
+  }
+  
+  .blog-title {
+    font-size: 2.2rem;
+  }
+  
+  .blog-intro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .temple-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .temple-number {
+    align-self: center;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .temple-image {
+    width: 100%;
+    height: 200px;
+    margin: 0.5rem 0;
+  }
+  
+  .temple-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .temple-content p {
+    font-size: 1rem;
+  }
+  
+  .temple-item:hover {
+    transform: translateY(-2px) scale(1.005);
+  }
+  
+  .temple-item:hover .temple-image img {
+    transform: scale(1.05);
+  }
+  
+  .blog-cta {
+    padding: 2rem 1.5rem;
+  }
+  
+  .blog-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .blog-cta p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-1px) scale(1.02);
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .blog {
+    padding: 2rem 0.8rem;
+  }
+  
+  .blog-title {
+    font-size: 1.8rem;
+  }
+  
+  .blog-intro {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .temple-item {
+    padding: 1rem;
+  }
+  
+  .temple-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .temple-image {
+    height: 150px;
+  }
+  
+  .temple-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .temple-content p {
+    font-size: 0.9rem;
+  }
+  
+  .temple-item:hover {
+    transform: translateY(-1px) scale(1.002);
+  }
+  
+  .temple-item:hover .temple-image img {
+    transform: scale(1.03);
+  }
+  
+  .blog-cta {
+    padding: 1.5rem 1rem;
+  }
+  
+  .blog-cta h3 {
+    font-size: 1.3rem;
+  }
+  
+  .blog-cta p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-1px) scale(1.01);
+  }
+}
+
+/* Extra Small Mobile Screens */
+@media (max-width: 360px) {
+  .blog-title {
+    font-size: 1.6rem;
+  }
+  
+  .temple-image {
+    height: 130px;
+  }
+  
+  .temple-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .temple-content p {
+    font-size: 0.85rem;
+  }
+  
+  .blog-cta h3 {
+    font-size: 1.2rem;
+  }
+  
+  .blog-cta p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+} 

@@ -1,7 +1,7 @@
 .hero {
-  background: linear-gradient(rgba(13,71,161,0.8), rgba(13,71,161,0.6)), 
-              url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-  color: #fff;
+  background: linear-gradient( rgba(0, 0, 0, 0.6)), 
+              url('https://media.istockphoto.com/id/1268716417/photo/misty-tirupathi.jpg?s=612x612&w=0&k=20&c=6tcFZEteaY9mOhZADzIRo8b8NmUqCEmsO6ZIgbfjGW0=') center/cover no-repeat;
+  color: #ffffff;
   padding: 10rem 2rem 8rem 2rem;
   text-align: center;
   position: relative;
@@ -11,6 +11,8 @@
   justify-content: center;
   align-items: center;
   animation: hero-zoom 20s infinite alternate ease-in-out;
+  transform: scale(1);
+  transition: all 0.4s ease;
 }
 
 @keyframes hero-zoom {
@@ -23,9 +25,11 @@
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
   max-width: 800px;
   line-height: 1.2;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .hero p {
@@ -34,7 +38,9 @@
   font-weight: 400;
   max-width: 600px;
   line-height: 1.5;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .hero-btn {
@@ -52,21 +58,95 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
+  transform: scale(1);
 }
 
 .hero-btn:hover {
-  background: linear-gradient(135deg, #fff 0%, #ffd600 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffd600 100%);
   color: #0d47a1;
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
   box-shadow: 0 12px 35px rgba(255, 214, 0, 0.4);
 }
 
 .hero-btn:active {
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(1.02);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Large Desktop Screens */
+@media (min-width: 1400px) {
+  .hero {
+    min-height: 90vh;
+    padding: 12rem 3rem 10rem 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 4.5rem;
+    max-width: 1000px;
+  }
+  
+  .hero p {
+    font-size: 1.8rem;
+    max-width: 700px;
+  }
+  
+  .hero-btn {
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+  }
+}
+
+/* Medium Desktop Screens */
+@media (max-width: 1399px) and (min-width: 1024px) {
+  .hero {
+    min-height: 85vh;
+    padding: 11rem 2.5rem 9rem 2.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    max-width: 900px;
+  }
+  
+  .hero p {
+    font-size: 1.7rem;
+    max-width: 650px;
+  }
+  
+  .hero-btn {
+    font-size: 1.4rem;
+    padding: 1.3rem 3.5rem;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 8rem 2rem 6rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    max-width: 800px;
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    max-width: 600px;
+  }
+  
+  .hero-btn {
+    font-size: 1.2rem;
+    padding: 1.1rem 2.8rem;
+  }
+  
+  .hero-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
   .hero {
     padding: 6rem 1.5rem 4rem 1.5rem;
     min-height: 70vh;
@@ -75,19 +155,26 @@
   .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1.2rem;
+    max-width: 100%;
   }
   
   .hero p {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
+    max-width: 100%;
   }
   
   .hero-btn {
     font-size: 1.1rem;
     padding: 1rem 2.5rem;
   }
+  
+  .hero-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
 }
 
+/* Small Mobile Screens */
 @media (max-width: 480px) {
   .hero {
     padding: 4rem 1rem 3rem 1rem;
@@ -107,5 +194,30 @@
   .hero-btn {
     font-size: 1rem;
     padding: 0.9rem 2rem;
+  }
+  
+  .hero-btn:hover {
+    transform: translateY(-1px) scale(1.01);
+  }
+}
+
+/* Extra Small Mobile Screens */
+@media (max-width: 360px) {
+  .hero {
+    padding: 3rem 0.8rem 2rem 0.8rem;
+    min-height: 55vh;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.8rem;
   }
 } 
